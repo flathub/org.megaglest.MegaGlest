@@ -107,6 +107,10 @@
                     "type": "archive",
                     "url": "https://github.com/MegaGlest/megaglest-data/releases/download/3.13.0/megaglest-data-3.13.0.tar.xz",
                     "sha256": "43de3ca668f0419e84ec6b37fa41dd6eb88052752a8a11f5e02ea13f86faef46"
+                },
+                {
+                    "type": "patch",
+                    "path": "appdata-Add-releases-section.patch"
                 }
             ]
         }
