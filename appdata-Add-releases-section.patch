@@ -1,0 +1,43 @@
+From 3a3679d0c2ebafa5cec3e90a484974add4d05269 Mon Sep 17 00:00:00 2001
+From: Will Thompson <will@willthompson.co.uk>
+Date: Tue, 26 Nov 2019 10:53:54 +0000
+Subject: [PATCH] appdata: Add <releases> section
+
+This is used by applications like GNOME Software to show release notes,
+by Flatpak to determine the human-facing version number for the
+application, and is now mandatory for applications on Flathub.
+
+https://www.freedesktop.org/software/appstream/docs/chap-Metadata.html#tag-releases
+---
+ others/appdata/megaglest.appdata.xml | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
+
+diff --git a/others/appdata/megaglest.appdata.xml b/others/appdata/megaglest.appdata.xml
+index 886d282d..a42f6ae5 100644
+--- a/others/appdata/megaglest.appdata.xml
++++ b/others/appdata/megaglest.appdata.xml
+@@ -37,6 +37,21 @@
+   <url type="translate">http://translate.megaglest.org</url>
+   <developer_name>The MegaGlest Team</developer_name>
+   <update_contact>contact_at_megaglest.org</update_contact>
++  <releases>
++    <release version="3.13.0" date="2017-03-09">
++      <url>https://megaglest.org/news/44/17/MegaGlest-3.13.0-released</url>
++      <description>
++        <p>The MegaGlest team is proud to release v3.13.0. Notable improvements to this release include:</p>
++        <ul>
++          <li>Multi-building select and key-binding for production of units</li>
++          <li>Buildings of the same type can be added to a control group, which means multiple units can be produced with a single click</li>
++          <li>A crash (out of sync) that sometimes happened when playing with Fog-of-War disabled has been fixed</li>
++          <li>Improved AI behavior</li>
++          <li>To help keep multi-player games more balanced and to ensure that players are practiced enough to harvest resources and beat a normal CPU, a scenario is automatically launched the first time a user tries to enter the lobby. The scenario must be won before the player can actually enter the lobby.</li>
++        </ul>
++      </description>
++    </release>
++  </releases>
+   <content_rating type="oars-1.0">
+     <content_attribute id="violence-cartoon">none</content_attribute>
+     <content_attribute id="violence-fantasy">moderate</content_attribute>
+-- 
+2.20.1
+
