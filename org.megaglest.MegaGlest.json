@@ -1,7 +1,7 @@
 {
     "app-id": "org.megaglest.MegaGlest",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "19.08",
+    "runtime-version": "20.08",
     "sdk": "org.freedesktop.Sdk",
     "rename-appdata-file": "megaglest.appdata.xml",
     "rename-desktop-file": "megaglest.desktop",
@@ -87,6 +87,10 @@
                     "type": "archive",
                     "url": "https://github.com/MegaGlest/megaglest-source/releases/download/3.13.0/megaglest-source-3.13.0.tar.xz",
                     "sha256": "09fef67bc6878b1afbb0b403fec9fcf7dc270d500fdc62ed98e5f210e398ccb9"
+                },
+                {
+                    "type": "patch",
+                    "path": "feathery-build.patch"
                 }
             ]
         },
