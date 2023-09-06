@@ -1,7 +1,7 @@
 {
     "app-id": "org.megaglest.MegaGlest",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "rename-appdata-file": "megaglest.appdata.xml",
     "rename-desktop-file": "megaglest.desktop",
