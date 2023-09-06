@@ -126,6 +126,10 @@
                     "path": "appdata-Add-releases-section.patch"
                 },
                 {
+                    "type": "patch",
+                    "path": "screenshot.patch"
+                },
+                {
                     "type": "file",
                     "path": "org.megaglest.MegaGlest.svg"
                 }
