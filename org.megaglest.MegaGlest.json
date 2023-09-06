@@ -100,6 +100,9 @@
             "config-opts": [
                 "-DMEGAGLEST_ICON_INSTALL_PATH=/app/share/icons/hicolor/48x48/apps"
             ],
+            "post-install": [
+                "install -Dm0644 org.megaglest.MegaGlest.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
+            ],
             "cleanup": [
                 "/share/appdata/megaglest_editor.appdata.xml",
                 "/share/applications/megaglest_editor.desktop",
@@ -115,6 +118,10 @@
                 {
                     "type": "patch",
                     "path": "appdata-Add-releases-section.patch"
+                },
+                {
+                    "type": "file",
+                    "path": "org.megaglest.MegaGlest.svg"
                 }
             ]
         }
