@@ -28,18 +28,24 @@
         "shared-modules/glew/glew.json",
         {
             "name": "ftgl",
-            "rm-configure": true,
-            "config-opts": ["--disable-static"],
+            "buildsystem": "cmake-ninja",
+            "config-opts":[
+                "-DOpenGL_GL_PREFERENCE=GLVND"
+            ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://downloads.sourceforge.net/project/ftgl/FTGL%20Source/2.1.3~rc5/ftgl-2.1.3-rc5.tar.gz",
-                    "sha256": "5458d62122454869572d39f8aa85745fc05d5518001bcefa63bd6cbb8d26565b"
+                    "type": "git",
+                    "url": "https://github.com/frankheckenbach/ftgl.git",
+                    "tag": "v2.4.0",
+                    "commit": "483639219095ad080538e07ceb5996de901d4e74"
                 },
                 {
-                    "type": "patch",
-                    "path": "ftgl-relibtoolize-prep.patch"
+                    "type": "shell",
+                    "commands": [
+                        "sed -i '29d' ./src/CMakeLists.txt"
+                    ]
                 }
+
             ]
         },
         {
