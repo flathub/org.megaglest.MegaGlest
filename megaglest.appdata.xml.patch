@@ -1,5 +1,5 @@
---- a/others/appdata/megaglest.appdata.xml	2024-09-21 11:10:23.614522951 -0500
-+++ b/others/appdata/megaglest.appdata.xml	2024-09-21 11:18:50.739541011 -0500
+--- a/others/megaglest.appdata.xml	2024-09-21 11:10:23.614522951 -0500
++++ b/others/megaglest.appdata.xml	2024-09-21 12:38:55.984712136 -0500
 @@ -1,8 +1,6 @@
  <?xml version="1.0" encoding="UTF-8"?>
 -<!-- Copyright 2015 MegaGlest Team <contact_at_megaglest.org> -->
@@ -66,8 +66,11 @@
      <content_attribute id="violence-cartoon">none</content_attribute>
      <content_attribute id="violence-fantasy">moderate</content_attribute>
      <content_attribute id="violence-realistic">mild</content_attribute>
-@@ -91,3 +105,4 @@
+@@ -89,5 +103,6 @@
+     <lang percentage="91">uz</lang>
+     <lang percentage="59">vi</lang>
    </languages>
-   <translation/>
+-  <translation/>
++  <translation type="gettext">MegaGlest</translation>
  </component>
 +
