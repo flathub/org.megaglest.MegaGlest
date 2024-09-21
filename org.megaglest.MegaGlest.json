@@ -125,7 +125,7 @@
             "name": "megaglest-data",
             "buildsystem": "cmake",
             "config-opts": [
-                "-DMEGAGLEST_ICON_INSTALL_PATH=/app/share/icons/hicolor/48x48/apps"
+                "-DMEGAGLEST_ICON_INSTALL_PATH=/app/share/icons-megaglest"
             ],
             "post-install": [
                 "install -Dm0644 org.megaglest.MegaGlest.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
@@ -134,8 +134,7 @@
                 "/share/appdata/megaglest_editor.appdata.xml",
                 "/share/applications/megaglest_editor.desktop",
                 "/share/applications/megaglest_g3dviewer.desktop",
-                "/share/menu",
-                "/share/icons/hicolor/48x48/apps/org.megaglest.MegaGlest.xpm"
+                "/share/menu"
             ],
             "sources": [
                 {
