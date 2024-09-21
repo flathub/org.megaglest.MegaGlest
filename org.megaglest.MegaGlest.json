@@ -134,7 +134,8 @@
                 "/share/appdata/megaglest_editor.appdata.xml",
                 "/share/applications/megaglest_editor.desktop",
                 "/share/applications/megaglest_g3dviewer.desktop",
-                "/share/menu"
+                "/share/menu",
+                "/share/icons/hicolor/48x48/apps/org.megaglest.MegaGlest.xpm"
             ],
             "sources": [
                 {
