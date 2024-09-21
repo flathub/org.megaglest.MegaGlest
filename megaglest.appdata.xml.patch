@@ -1,0 +1,73 @@
+--- a/others/appdata/megaglest.appdata.xml	2024-09-21 11:10:23.614522951 -0500
++++ b/others/appdata/megaglest.appdata.xml	2024-09-21 11:18:50.739541011 -0500
+@@ -1,8 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<!-- Copyright 2015 MegaGlest Team <contact_at_megaglest.org> -->
+-<!-- all urls http type; minimal version of validator: 0.6.1 -->
+ <component type="desktop">
+-  <id>megaglest.desktop</id>
++  <id>org.megaglest.MegaGlest</id>
+   <metadata_license>CC-BY-SA-4.0</metadata_license>
+   <project_license>GPL-3.0+ and CC-BY-SA-3.0</project_license>
+   <name>MegaGlest</name>
+@@ -14,21 +12,22 @@
+   </description>
+   <screenshots>
+     <screenshot type="default">
+-      <image>http://megaglest.org/uploads/images/appdata/game1.png</image>
++      <image>https://megaglest.org/media/pics/a2.jpg</image>
+     </screenshot>
+     <screenshot>
+-      <image>http://megaglest.org/uploads/images/appdata/game2.png</image>
++      <image>https://megaglest.org/media/pics/a25.jpg</image>
+     </screenshot>
+     <screenshot>
+-      <image>http://megaglest.org/uploads/images/appdata/game3.png</image>
+-    </screenshot>
+-    <screenshot>
+-      <image>http://megaglest.org/uploads/images/appdata/game4.png</image>
+-    </screenshot>
+-    <screenshot>
+-      <image>http://megaglest.org/uploads/images/appdata/game5.png</image>
++      <image>https://megaglest.org/media/pics/a62.jpg</image>
+     </screenshot>
+   </screenshots>
++  <categories>
++    <category>Game</category>
++  </categories>
++  <launchable type="desktop-id">org.megaglest.MegaGlest.desktop</launchable>
++  <provides>
++    <binary>megaglest</binary>
++  </provides>
+   <url type="homepage">http://megaglest.org</url>
+   <url type="bugtracker">http://bugs.megaglest.org</url>
+   <url type="faq">http://faq.megaglest.org</url>
+@@ -37,7 +36,22 @@
+   <url type="translate">http://translate.megaglest.org</url>
+   <developer_name>The MegaGlest Team</developer_name>
+   <update_contact>contact_at_megaglest.org</update_contact>
+-  <content_rating type="oars-1.0">
++  <releases>
++    <release version="3.13.0" date="2017-03-09">
++      <url>https://megaglest.org/news/44/17/MegaGlest-3.13.0-released</url>
++      <description>
++        <p>The MegaGlest team is proud to release v3.13.0. Notable improvements to this release include:</p>
++        <ul>
++         <li>Multi-building select and key-binding for production of units</li>
++         <li>Buildings of the same type can be added to a control group, which means multiple units can be produced with a single click</li>
++          <li>A crash (out of sync) that sometimes happened when playing with Fog-of-War disabled has been fixed</li>
++          <li>Improved AI behavior</li>
++          <li>To help keep multi-player games more balanced and to ensure that players are practiced enough to harvest resources and beat a normal CPU, a scenario is automatically launched the first time a user tries to enter the lobby. The scenario must be won before the player can actually enter the lobby.</li>
++        </ul>
++     </description>
++   </release>
++  </releases>
++  <content_rating type="oars-1.1">
+     <content_attribute id="violence-cartoon">none</content_attribute>
+     <content_attribute id="violence-fantasy">moderate</content_attribute>
+     <content_attribute id="violence-realistic">mild</content_attribute>
+@@ -91,3 +105,4 @@
+   </languages>
+   <translation/>
+ </component>
++
