@@ -44,10 +44,8 @@
                     "commit": "483639219095ad080538e07ceb5996de901d4e74"
                 },
                 {
-                    "type": "shell",
-                    "commands": [
-                        "sed -i '29d' ./src/CMakeLists.txt"
-                    ]
+                    "type": "patch",
+                    "path": "ftgl-CMakeLists.txt.patch"
                 }
 
             ]
