@@ -1,7 +1,7 @@
 {
     "app-id": "org.megaglest.MegaGlest",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "23.08",
+    "runtime-version": "24.08",
     "sdk": "org.freedesktop.Sdk",
     "rename-appdata-file": "megaglest.appdata.xml",
     "rename-desktop-file": "megaglest.desktop",
@@ -32,6 +32,10 @@
             "config-opts":[
                 "-DOpenGL_GL_PREFERENCE=GLVND"
             ],
+            "build-options": {
+                "cflags": "-fpermissive",
+                "cxxflags": "-fpermissive"
+            },
             "sources": [
                 {
                     "type": "git",
@@ -82,6 +86,23 @@
             ]
         },
         {
+            "name": "p7zip",
+            "no-autogen": true,
+            "make-args": [
+                "7z"
+            ],
+            "make-install-args": [
+                "DEST_HOME=/app"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/p7zip-project/p7zip/archive/refs/tags/v17.05.tar.gz",
+                    "sha256": "d2788f892571058c08d27095c22154579dfefb807ebe357d145ab2ddddefb1a6"
+                }
+            ]
+        },
+        {
             "name": "megaglest",
             "buildsystem": "cmake",
             "config-opts": [
@@ -107,7 +128,8 @@
                 "-DMEGAGLEST_ICON_INSTALL_PATH=/app/share/icons/hicolor/48x48/apps"
             ],
             "post-install": [
-                "install -Dm0644 org.megaglest.MegaGlest.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg"
+                "install -Dm0644 org.megaglest.MegaGlest.svg ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
+                "rm /app/share/icons/hicolor/48x48/apps/megaglest.xpm"
             ],
             "cleanup": [
                 "/share/appdata/megaglest_editor.appdata.xml",
@@ -123,11 +145,7 @@
                 },
                 {
                     "type": "patch",
-                    "path": "appdata-Add-releases-section.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "screenshot.patch"
+                    "path": "megaglest.appdata.xml.patch"
                 },
                 {
                     "type": "file",
